@@ -1,0 +1,48 @@
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<style>
+model-viewer {
+  width: 100vw;
+  height: 50vh;
+}
+
+#ar-button {
+
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 12px 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    top: 0px;
+    padding: 0px 40px 0px 40px;
+    font-family: Roboto Regular, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    color:#4285f4;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 18px;
+    border: 1px solid #DADCE0;
+  }
+
+  #ar-button:active {
+    background-color: #E8EAED;
+  }
+
+  #ar-button:focus {
+    outline: none;
+  }
+
+  #ar-button:focus-visible {
+    outline: 1px solid #4285f4;
+  }
+
+</style>
+
+<model-viewer src="https://dl.dropboxusercontent.com/s/xiccj1jhdfrajcf/zaruku.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="https://dl.dropboxusercontent.com/s/o49zrebllpbmopu/zaruku.usdz" xr-environment>
+    <button slot="ar-button" id="ar-button">
+        Смотреть в дополненной реальности
+    </button>
+</model-viewer>
